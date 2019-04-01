@@ -12,7 +12,6 @@ export class InfoPaginaService {
   equipo: any[] = [];
 
   constructor( private http: HttpClient ) {
-    console.log('Servicio de infopagina listo');
     this.cargarInfo();
     this.cargarEquipo();
    }
@@ -28,7 +27,6 @@ export class InfoPaginaService {
      this.http.get('https://angular-html-27809.firebaseio.com/equipo.json')
          .subscribe( (resp: any[]) => {
            this.equipo = resp;
-           
          });
    }
 }
